@@ -10,6 +10,7 @@ ini_set('display_errors',1);
 
   <title> P2_Aditya_Kumar</title>
   <?php require 'pass_gen.php'; ?>
+  <link rel="stylesheet" href="p2_style_sheet.css">
   <meta charset = 'utf-8'>
 
 </head>
@@ -17,31 +18,29 @@ ini_set('display_errors',1);
 
 <body>
 
-    <h1> Welcome to the xkcd passoword generator </h1>
+    <h1> xkcd password generator </h1>
+
+
     <form action='index.php' method='GET'>
-        <label>Number of words <input type='text' name='passwd'
-            maxlength='20'></label> <br>
+        <label>Number of words(min:0, max:8) </label><input type='text' name='passwd'
+            maxlength='1'> <br>
+            <br>
         <input type='checkbox' name='numberoption'
             value='yes' unchecked> Include a number? <br>
+            <br>
         <input type='checkbox' name='symboloption'
         value='yes' unchecked> Include a symbol? <br>
+        <br>
         <input type='submit' value='get passwd'>
 
     </form>
+    <br>
+    <h3> <?php echo $test_mess ?> </h3>
+    <h2> <?php echo $finpasswd?> </h2>
 
-<?php
-#var_dump();
-    #if ($nwords != ''){
-    if ($nwords != ''){
-    echo $finpasswd;
-    $nwords='';
-    $numbornot='';
-    $symbornot='';
-    $finpasswd='';
-    #echo $numbornot;
-    #echo $symbornot;
-    }
-?>
+    <img src='xkcd_image.png'><br>
+
+
 </body>
 
 </html>
