@@ -61,9 +61,9 @@ if (!(in_array($nwords,$posswordnum))){
         include symbol to generate a password (displaying default 5 word
         password)";
         $nwords='5';
-    } elseif ($nwords != '') {
+    } elseif ($nwords != '' && (($numbornot =='yes')|| ($symbornot == 'yes'))) {
         $test_mess="invalid number of words value (displaying default 5 word
-                    password)";
+                    password with number/symbol if checked)";
         $nwords='5';
 }
 }
