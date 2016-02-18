@@ -25,11 +25,16 @@ ini_set('display_errors',1);
         <label>Number of words(min:0, max:8) </label><input type='text' name='passwd'
             maxlength='1'> <br>
             <br>
-        <input type='checkbox' name='numberoption'
-            value='yes' unchecked> Include a number? <br>
-            <br>
-        <input type='checkbox' name='symboloption'
-        value='yes' unchecked> Include a symbol? <br>
+        <label>
+            <input type='checkbox' name='numberoption'
+                value='yes'> Include a number?
+        </label> <br>
+        <br>
+
+        <label>
+            <input type='checkbox' name='symboloption'
+                value='yes'> Include a symbol? <br>
+        </label>
         <br>
         <input type='submit' value='get passwd'>
 
@@ -38,7 +43,7 @@ ini_set('display_errors',1);
     <h3> <?php echo $test_mess ?> </h3>
     <h2> <?php echo $finpasswd?> </h2>
 
-    <img src='xkcd_image.png'><br>
+    <img src='xkcd_image.png' alt='xkcd password image'><br>
 
 
 </body>
