@@ -22,7 +22,8 @@ ini_set('display_errors',1);
 
 
     <form action='index.php' method='GET'>
-        <label>Number of words(min:0, max:8) </label><input type='text' name='passwd'
+        <label>Number of words(min:0, max:8) </label>
+        <input type='text' name='passwd'
             maxlength='1'> <br>
             <br>
         <label>
