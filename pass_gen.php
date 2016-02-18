@@ -63,7 +63,7 @@ if (!(in_array($nwords,$posswordnum))){
         $nwords='5';
     } elseif ($nwords != '') {
         $test_mess="invalid number of words value (displaying default 5 word
-                    password)";
+                    password along with a number and symbol if selected)";
         $nwords='5';
 }
 }
