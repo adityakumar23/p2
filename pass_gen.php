@@ -63,7 +63,7 @@ if (!(in_array($nwords,$posswordnum))){
         $nwords='5';
     } elseif ($nwords != '') {
         $test_mess="invalid number of words value (displaying default 5 word
-                    password along with a number and symbol if selected)";
+                    password)";
         $nwords='5';
 }
 }
@@ -86,6 +86,7 @@ for ($i=0;$i<$nwords;$i++){
 /*===============================================
 now add the numbers and symbols if required
 =================================================*/
+if (in_array($nwords,$posswordnum)){
 if ($numbornot == 'yes'){
     $k=rand(0,count($number)-1);
     $finpasswd = $finpasswd . $number[$k];
@@ -93,6 +94,7 @@ if ($numbornot == 'yes'){
 if ($symbornot == 'yes'){
     $l=rand(0,count($symb)-1);
     $finpasswd = $finpasswd . $symb[$l];
+}
 }
 
 ?>
